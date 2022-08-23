@@ -5,22 +5,24 @@ function btnSelect(element){
         playerListArray.push(playerName);
            const ol = document.getElementById('order-list')
             ol.innerText = '';
-            let length = playerListArray.length;
-            for(let i = 0; i < playerListArray.length; i++){
-                    let name = playerListArray[i];
-                    const li = document.createElement('li');
-                     li.innerText = `${name}`;
-                    ol.appendChild(li);
-                    element.disabled = true;
-                   if(document.getElementById('order-list').childElementCount == 5){
-                    alert('Can not select more than five');
-                    return false;
-                   }
-                    
-            }
+            let length = playerListArray.length;    
+      for(let i = 0; i < playerListArray.length; i++){
+          if(document.getElementById('order-list').childElementCount < 5){
+            let name = playerListArray[i];
+             const li = document.createElement('li');
+              li.innerText = `${name}`;
+             ol.appendChild(li);
+             element.disabled = true; 
+            } 
+               else{ 
+                   element.disabled = false;
+              alert('Can not select more than five');
+              return false;
+               }  
+         }
+
  }
                             
-
  document.getElementById('btn-calculate').addEventListener('click', function () {
     const perPlayerCost = getInputValueById('per-player-Expence-field');
     
