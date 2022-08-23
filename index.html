@@ -58,8 +58,8 @@
                     </div>
                     <div class="col-3">
                         <div class="card-player text-center text-white">
-                            <div class="card-body">
-                              <h4 class="card-title py-3 fw-bold mb-5" id="player-selected-list">Selected-V</h4>
+                            <div class="card-body" id="player-selected-list">
+                              <h4 class="card-title py-3 fw-bold mb-5" >Selected-V</h4>
                              <ol id="order-list"></ol>
                             </div>
                           </div>
@@ -98,13 +98,13 @@
                         <div class="card-player text-center text-white">
                             <div class="card-body">
                               <h4 class="card-title py-3 fw-bold">Budget</h4>
-                             <p class="px-1 mb-4">Per Player <input type="number" id="per-player-price" value="1000"></p>
-                              <button class="btn btn-primary w-75 mb-4">Calculate</button>
-                              <P class="mx-1" id="player-expences mb-4">player Expences: $<span>5000</span></P> 
-                              <p class="px-2 mb-4">Manager <input type="number" id="manager-price" value="2000"></p> 
-                              <p class="px-3 mb-4">Coach <input type="number" id="coach-price" value="4000"></p>
-                              <button  class="btn btn-primary w-75 mb-4">Calculate Total</button>
-                              <P class="" id="player-expences mb-3 ">Total <span class="total">$<span>11000</span></span></P>
+                             <p class="px-1 mb-4">Per Player <input type="number" id="per-player-Expence-field"></p>
+                              <button class="btn btn-primary w-75 mb-4" id="btn-calculate">Calculate</button>
+                              <P class="mx-1  mb-4">player Expences: $<span id="per-player-total-expence">00</span></P> 
+                              <p class="px-2 mb-4">Manager <input type="number" id="manager-expence-field" ></p> 
+                              <p class="px-3 mb-4">Coach <input type="number" id="coach-expence-filed" ></p>
+                              <button  class="btn btn-primary w-75 mb-4" id="btn-calculate-total">Calculate Total</button>
+                              <P class=" mb-3 ">Total <span class="total">$<span id="total-expence">00</span></span></P>
 
                             </div>
                           </div>
@@ -114,8 +114,7 @@
         </section>
     </main>
     <!-- js link -->
-    <script src="assets/js/utilities.js"></script>
-    <script src="assets/js/player-list.js"></script>
-    <script src="assets/js/player-budget.js"></script>
+    <script src="assets/js/index.js"></script>
+   
 </body>
 </html>
