@@ -9,9 +9,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #282727;
 }
-img{
-    max-width: 100%;
-}
+
 /* banner css */
 .banner{
     background-color:#000000 ;
@@ -36,11 +34,16 @@ img{
 /* players css */
 
 .card-player {
-    width: ;
     border: 1px solid #bbb;
-    padding: 20px;
+    padding-bottom:30px;
     background-color: #000000;
   }
-  .card-player h5 {
-    
+.card-body img{
+    width: 100%;
+    height: 204px;
+}
+  .total{
+    color: #FF5E19;
+    padding-left: 150px;
+
   }
