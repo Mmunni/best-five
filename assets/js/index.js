@@ -5,7 +5,7 @@ function btnSelect(element){
         playerListArray.push(playerName);
            const ol = document.getElementById('order-list')
             ol.innerText = '';
-            var length = playerListArray.length;
+            let length = playerListArray.length;
             for(let i = 0; i < playerListArray.length; i++){
                     let name = playerListArray[i];
                     const li = document.createElement('li');
@@ -22,16 +22,10 @@ function btnSelect(element){
                             
 
  document.getElementById('btn-calculate').addEventListener('click', function () {
-    const perPlayerCostField = document.getElementById('per-player-Expence-field');
-    const perPlayerCostString = perPlayerCostField.value;
-    const perPlayerCost = parseInt(perPlayerCostString);
+    const perPlayerCost = getInputValueById('per-player-Expence-field');
     
+    const playerTotalExpence  = getElementTextById('per-player-total-expence');
 
-    const playerExpenseTotal = document.getElementById('per-player-total-expence');
-    const playerTotalExpenceString = playerExpenseTotal.innerText;
-    const playerTotalExpence = parseInt(playerTotalExpenceString);
-
-    // console.log(playerTotalExpence);
     let numberOfPlayer = document.getElementById("order-list").children.length;
 
     //set player expense
@@ -42,45 +36,19 @@ function btnSelect(element){
 
 document.getElementById('btn-calculate-total').addEventListener('click', function () {
     // Player Expense
-    const playerExpenseText = document.getElementById('per-player-total-expence');
-    const perPlayerExpenseString = playerExpenseText.innerText;
-    const perPlayerExpense = parseFloat(perPlayerExpenseString);
-
-    // console.log(perPlayerExpense);
-
+    const perPlayerExpense  = getElementTextById('per-player-total-expence');
 
     // Manager
-    const managerCostField = document.getElementById('manager-expence-field');
-    const perManagerCostString = managerCostField.value;
-    const perManagerCost = parseFloat(perManagerCostString);
-    // console.log(perManagerCost);
+    const perManagerCost = getInputValueById('manager-expence-field');
 
     // Coach
-    const coachCostField = document.getElementById('coach-expence-filed');
-    const perCoachCostString = coachCostField.value;
-    const perCoachCost = parseFloat(perCoachCostString);
-
-
+    const perCoachCost = getInputValueById('coach-expence-filed');
 
     //get total
-    const playerExpenseTotalText = document.getElementById('total-expence');
-    const PlayerExpenseTotalString = playerExpenseTotalText.innerText;
-    const totalExpense = parseFloat(PlayerExpenseTotalString);
-    // console.log(totalExpense);
-    // Calculate total
-
     const newExpenseTotal = perPlayerExpense + perManagerCost + perCoachCost;
-
-    // playerExpenseTotalText.innerText = newExpenseTotal;
 
     setTextElementValueById('total-expence', newExpenseTotal);
 
 
  })
 
- function setTextElementValueById(elementId, newValue) {
-    const textElement = document.getElementById(elementId);
-
-    textElement.innerText = newValue;
-
-}
