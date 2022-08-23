@@ -1,122 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fifa World Cup Qatar 2022</title>
-    <!-- bootstrap cdn link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <!-- header area start -->
-    <header class="banner">
-        <div class="container">
-            <div class="banner-title">
-                <h1>FIFA World Cup Qatar 2022</h1>
-                <p class="text-center text-white">As we count down to the start of the global showpiece in Qatar on 20 November,<br> FIFA+ is showcasing 100 of the greatest moments in FIFA World Cup history.</p>
-            </div>
-        </div>
-    </header>
-    <!-- main area start -->
-    <main>
-        <!-- player list -->
-        <section class="players">
-            <div class="container">
-                <div class="row py-5 g-4">
-                    <div class="col-3">
-                        <div class="card-player player text-center text-white">
-                            <div class="card-body">
-                                <img src="assets/images/players/player-1.jpg" alt="">
-                              <h4 class="card-title pt-3 pb-2 fw-bold">Lionel Mesi</h4>
-                              <p class="card-text text-secondary">30 Goals - 113 Assist</span></p>
-                              <button class="btn btn-primary w-75"onclick="btnSelect(this)">SELECT</button>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card-player player text-center text-white">
-                            <div class="card-body">
-                                <img src="assets/images/players/player-2.jpg" alt="">
-                              <h4 class="card-title pt-3 pb-2 fw-bold">Neymar Jr</h4>
-                              <p class="card-text text-secondary">35 Goals - 122 Assist</span></p>
-                              <button class="btn btn-primary w-75"onclick="btnSelect(this)">SELECT</button>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card-player player text-center text-white">
-                            <div class="card-body">
-                                <img src="assets/images/players/player-3.jpg" class="img-fluid" alt="">
-                              <h4 class="card-title pt-3 pb-2 fw-bold">Kylian Mbappe</h4>
-                              <p class="card-text text-secondary">15 Goals - 120 Assist</span></p>
-                              <button class="btn btn-primary w-75"onclick="btnSelect(this)">SELECT</button>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card-player text-center text-white">
-                            <div class="card-body" id="player-selected-list">
-                              <h4 class="card-title py-3 fw-bold mb-5" >Selected-V</h4>
-                             <ol id="order-list"></ol>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card-player player text-center text-white">
-                            <div class="card-body">
-                                <img src="assets/images/players/player-4.webp" alt="">
-                              <h4 class="card-title pt-3 pb-2 fw-bold">Vitor Machado</h4>
-                              <p class="card-text text-secondary">20 Goals - 100 Assist</span></p>
-                              <button class="btn btn-primary w-75"onclick="btnSelect(this)">SELECT</button>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card-player player text-center text-white">
-                            <div class="card-body">
-                                <img src="assets/images/players/player-5.jpg" alt="">
-                              <h4 class="card-title pt-3 pb-2 fw-bold">Sergio Ramos</h4>
-                              <p class="card-text text-secondary">27 Goals - 111 Assist</span></p>
-                              <button class="btn btn-primary w-75" onclick="btnSelect(this)">SELECT</button>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card-player player text-center text-white">
-                            <div class="card-body">
-                                <img src="assets/images/players/player-6.jpg" alt="">
-                              <h4 class="card-title pt-3 pb-2 fw-bold">Renato Sanches</h4>
-                              <p class="card-text text-secondary">24 Goals - 80 Assist</span></p>
-                              <button class="btn btn-primary w-75"onclick="btnSelect(this)">SELECT</button>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- total budget -->
-                    <div class="col-3">
-                        <div class="card-player text-center text-white">
-                            <div class="card-body">
-                              <h4 class="card-title py-3 fw-bold">Budget</h4>
-                             <p class="px-1 mb-4">Per Player <input type="number" id="per-player-Expence-field"></p>
-                              <button class="btn btn-primary w-75 mb-4" id="btn-calculate">Calculate</button>
-                              <P class="mx-1  mb-4">player Expences: $<span id="per-player-total-expence">00</span></P> 
-                              <p class="px-2 mb-4">Manager <input type="number" id="manager-expence-field" ></p> 
-                              <p class="px-3 mb-4">Coach <input type="number" id="coach-expence-filed" ></p>
-                              <button  class="btn btn-primary w-75 mb-4" id="btn-calculate-total">Calculate Total</button>
-                              <P class=" mb-3 ">Total <span class="total">$<span id="total-expence">00</span></span></P>
 
-                            </div>
-                          </div>
-                    </div>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fifa World Cup Qatar 2022</title>
+  <!-- bootstrap cdn link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- header area start -->
+  <header class="banner">
+    <div class="container">
+      <div class="banner-title">
+        <h1>FIFA World Cup Qatar 2022</h1>
+        <p class="text-center text-white">As we count down to the start of the global showpiece in Qatar on 20
+          November,<br> FIFA+ is showcasing 100 of the greatest moments in FIFA World Cup history.</p>
+      </div>
+    </div>
+  </header>
+  <!-- main area start -->
+  <main>
+    <!-- player list -->
+    <section class="players">
+      <div class="container">
+        <div class="row py-5 g-4">
+          <div class="col-3">
+            <div class="card-player player text-center text-white">
+              <div class="card-body">
+                <img src="assets/images/players/player-1.jpg" alt="">
+                <h4 class="card-title pt-3 pb-2 fw-bold">Lionel Mesi</h4>
+                <p class="card-text text-secondary">30 Goals - 113 Assist</span></p>
+                <button class="btn btn-primary w-75" onclick="btnSelect(this)">SELECT</button>
+              </div>
             </div>
-        </section>
-    </main>
-    <!-- js link -->
-    <script src="assets/js/utilities.js"></script>
-    <script src="assets/js/index.js"></script>
-   
+          </div>
+          <div class="col-3">
+            <div class="card-player player text-center text-white">
+              <div class="card-body">
+                <img src="assets/images/players/player-2.jpg" alt="">
+                <h4 class="card-title pt-3 pb-2 fw-bold">Neymar Jr</h4>
+                <p class="card-text text-secondary">35 Goals - 122 Assist</span></p>
+                <button class="btn btn-primary w-75" onclick="btnSelect(this)">SELECT</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card-player player text-center text-white">
+              <div class="card-body">
+                <img src="assets/images/players/player-3.jpg" class="img-fluid" alt="">
+                <h4 class="card-title pt-3 pb-2 fw-bold">Kylian Mbappe</h4>
+                <p class="card-text text-secondary">15 Goals - 120 Assist</span></p>
+                <button class="btn btn-primary w-75" onclick="btnSelect(this)">SELECT</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card-player text-center text-white">
+              <div class="card-body" id="player-selected-list">
+                <h4 class="card-title py-3 fw-bold mb-5">Selected-V</h4>
+                <ol id="order-list"></ol>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card-player player text-center text-white">
+              <div class="card-body">
+                <img src="assets/images/players/player-4.webp" alt="">
+                <h4 class="card-title pt-3 pb-2 fw-bold">Vitor Machado</h4>
+                <p class="card-text text-secondary">20 Goals - 100 Assist</span></p>
+                <button class="btn btn-primary w-75" onclick="btnSelect(this)">SELECT</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card-player player text-center text-white">
+              <div class="card-body">
+                <img src="assets/images/players/player-5.jpg" alt="">
+                <h4 class="card-title pt-3 pb-2 fw-bold">Sergio Ramos</h4>
+                <p class="card-text text-secondary">27 Goals - 111 Assist</span></p>
+                <button class="btn btn-primary w-75" onclick="btnSelect(this)">SELECT</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card-player player text-center text-white">
+              <div class="card-body">
+                <img src="assets/images/players/player-6.jpg" alt="">
+                <h4 class="card-title pt-3 pb-2 fw-bold">Renato Sanches</h4>
+                <p class="card-text text-secondary">24 Goals - 80 Assist</span></p>
+                <button class="btn btn-primary w-75" onclick="btnSelect(this)">SELECT</button>
+              </div>
+            </div>
+          </div>
+          <!-- total budget -->
+          <div class="col-3">
+            <div class="card-player text-center text-white">
+              <div class="card-body">
+                <h4 class="card-title py-3 fw-bold">Budget</h4>
+                <p class="px-1 mb-4">Per Player <input type="number" id="per-player-Expence-field"></p>
+                <button class="btn btn-primary w-75 mb-4" id="btn-calculate">Calculate</button>
+                <P class="mx-1  mb-4">player Expences: $<span id="per-player-total-expence">00</span></P>
+                <p class="px-2 mb-4">Manager <input type="number" id="manager-expence-field"></p>
+                <p class="px-3 mb-4">Coach <input type="number" id="coach-expence-filed"></p>
+                <button class="btn btn-primary w-75 mb-4" id="btn-calculate-total">Calculate Total</button>
+                <P class=" mb-3 ">Total <span class="total">$<span id="total-expence">00</span></span></P>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- js link -->
+  <script src="assets/js/utilities.js"></script>
+  <script src="assets/js/index.js"></script>
+
 </body>
+
 </html>
